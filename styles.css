@@ -1,0 +1,5 @@
+.boxed {
+    border: 1px solid green ;
+    width: 400px;
+    height: 250px;
+}

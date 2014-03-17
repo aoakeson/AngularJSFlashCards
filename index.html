@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="degreeApp">
+<head>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+    <title></title>
+</head>
+<body>
+
+<h1>Flash Cards</h1>
+
+<div ng-controller="SearchController">
+
+    <input ng-model="searchTerms">
+    <select ng-model="setNumber" ng-options="c.title for c in results" ng-change="getSelectedSet()"></select>
+{{results.title}}
+
+<div ng-controller = "SimpleController">
+{{clock}}
+    <button id="start" onclick="start()">START</button>
+    <!--<b>{{randomTerm}}</b>-->
+    <div class="boxed">
+        <input ng-model="theterm"> </input>
+        <p><br>
+            <b>{{randomTerm.definition}}</b>
+        <button ng-click="skipQuestion()" id="skip">Skip</button>
+            <button ng-click="showAnswer()" id="showAnswer">Show Answer</button>
+
+        <b>{{answer}}</b>
+    </div>
+</div>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript" src="Degree.js"></script>
+</body>
+</html>
